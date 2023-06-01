@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!-- Инициализация схемы БД -->
+    <include file="db.taskstatus-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.projectstatus-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.position-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.team-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.employee-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.project-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.task-table.xml" relativeToChangelogFile="true"/>
+
+    <!-- Инициализация данных в БД -->
+    <include file="db.taskstatus-init.xml" relativeToChangelogFile="true"/>
+    <include file="db.projectstatus-init.xml" relativeToChangelogFile="true"/>
+    <include file="db.position-init.xml" relativeToChangelogFile="true"/>
+    <include file="db.team-init.xml" relativeToChangelogFile="true"/>
+    <include file="db.employee-init.xml" relativeToChangelogFile="true"/>
+    <include file="db.project-init.xml" relativeToChangelogFile="true"/>
+    <include file="db.task-init.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

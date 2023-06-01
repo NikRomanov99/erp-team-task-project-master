@@ -1,0 +1,51 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet context="legacy" author="Alina" id="insert data to employee table">
+        <insert tableName="employee">
+            <column name="id" valueNumeric="1"/>
+            <column name="full_name" value="Романов Никита Алексеевич"/>
+            <column name="email_address" value="nromanov@oilgas.ru"/>
+            <column name="r_position_id" valueNumeric="2"/>
+            <column name="r_team_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="employee">
+            <column name="id" valueNumeric="2"/>
+            <column name="full_name" value="Журба Алина Сергеевна"/>
+            <column name="email_address" value="azhurba@oilgas.ru"/>
+            <column name="r_position_id" valueNumeric="3"/>
+            <column name="r_team_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="employee">
+            <column name="id" valueNumeric="3"/>
+            <column name="full_name" value="Панов Александр Николаевич"/>
+            <column name="email_address" value="apanov@oilgas.ru"/>
+            <column name="r_position_id" valueNumeric="1"/>
+            <column name="r_team_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="employee">
+            <column name="id" valueNumeric="4"/>
+            <column name="full_name" value="Кровникова Юлия Витальевна"/>
+            <column name="email_address" value="jkrovnikova@oilgas.ru"/>
+            <column name="r_position_id" valueNumeric="4"/>
+            <column name="r_team_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="employee">
+            <column name="id" valueNumeric="5"/>
+            <column name="full_name" value="Самушкова Элина Сергеевна"/>
+            <column name="email_address" value="esamushkina@oilgas.ru"/>
+            <column name="r_position_id" valueNumeric="1"/>
+            <column name="r_team_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="employee">
+            <column name="id" valueNumeric="6"/>
+            <column name="full_name" value="Дмитриева Ирина Михайловна"/>
+            <column name="email_address" value="idmirieva@oilgas.ru"/>
+            <column name="r_position_id" valueNumeric="5"/>
+            <column name="r_team_id" valueNumeric="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

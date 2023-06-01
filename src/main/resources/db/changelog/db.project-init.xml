@@ -1,0 +1,30 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet context="legacy" author="Alina" id="insert data to project table">
+        <insert tableName="project">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Проект разработки ERP системы"/>
+            <column name="description" value="Создана"/>
+            <column name="create_dt" valueDate="now()"/>
+            <column name="update_dt" valueDate="now()"/>
+            <column name="r_project_status_id" valueNumeric="1"/>
+            <column name="r_main_employee_id" valueNumeric="2"/>
+            <column name="r_team_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="project">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Проект Манхэттен"/>
+            <column name="description" value="Создана"/>
+            <column name="create_dt" valueDate="now()"/>
+            <column name="update_dt" valueDate="now()"/>
+            <column name="r_project_status_id" valueNumeric="1"/>
+            <column name="r_main_employee_id" valueNumeric="1"/>
+            <column name="r_team_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

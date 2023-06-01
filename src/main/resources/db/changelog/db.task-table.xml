@@ -1,0 +1,59 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet context="legacy" author="Alina" id="add task table">
+        <createTable tableName="task">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+            <column name="description" type="varchar(255)"/>
+            <column name="create_dt" type="datetime"/>
+            <column name="update_dt" type="datetime"/>
+            <column name="deadline_dt" type="datetime"/>
+
+            <column name="r_task_status_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="r_employee_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="r_project_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Alina"
+               id="fk_task_task_status">
+        <addForeignKeyConstraint baseColumnNames="r_task_status_id"
+                                 baseTableName="task"
+                                 constraintName="fk_task_task_status"
+                                 onDelete="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="task_status"/>
+    </changeSet>
+
+    <changeSet author="Alina"
+               id="fk_task_employee">
+        <addForeignKeyConstraint baseColumnNames="r_employee_id"
+                                 baseTableName="task"
+                                 constraintName="fk_task_employee"
+                                 onDelete="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+    </changeSet>
+
+    <changeSet author="Alina"
+               id="fk_task_project">
+        <addForeignKeyConstraint baseColumnNames="r_project_id"
+                                 baseTableName="task"
+                                 constraintName="fk_task_project"
+                                 onDelete="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet context="legacy" author="Alina" id="insert data to task table">
+        <insert tableName="task">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Подготовка концепта проекта и ТЗ"/>
+            <column name="description" value="Подготовка концепта ERP система для разработки"/>
+            <column name="create_dt" valueDate="now()"/>
+            <column name="update_dt" valueDate="now()"/>
+            <column name="deadline_dt" valueDate="2023-06-08"/>
+            <column name="r_task_status_id" valueNumeric="2"/>
+            <column name="r_employee_id" valueNumeric="2"/>
+            <column name="r_project_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="task">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Разработка схемы БД"/>
+            <column name="description" value="Разработка схемы БД для будующей системы"/>
+            <column name="create_dt" valueDate="now()"/>
+            <column name="update_dt" valueDate="now()"/>
+            <column name="deadline_dt" valueDate="2023-06-08"/>
+            <column name="r_task_status_id" valueNumeric="1"/>
+            <column name="r_employee_id" valueNumeric="3"/>
+            <column name="r_project_id" valueNumeric="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
